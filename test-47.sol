@@ -1,4 +1,4 @@
-pragma solidity >=0.5.16 <0.6.9;
+pragma solidity 0.8.4;
 contract betminer {
     function checklasttwentyblock() view public returns(uint256, uint256) {
     
