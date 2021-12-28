@@ -10,6 +10,7 @@ import "./Ownable.sol";
 
 contract WStock3 is ReentrancyGuard, Context, Ownable {
 
+  using SafeMath for uint256;
   constructor (address _gasToken ,address _authAddress, address payable _holdingAddress, uint256 _feeRate, uint256 _acceptableTolerance, uint256 _reserve) {
     GAS_TOKEN = IERC20(_gasToken);
     authAddress = _authAddress;
