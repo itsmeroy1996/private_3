@@ -9,7 +9,7 @@ contract SimpleStorage {
    }
 }
 
-pragma solidity ^0.8.4;
+pragma solidity 0.8.4;
 contract SimpleStorage {
    uint storedData;
    function set(uint x) public {
@@ -20,7 +20,7 @@ contract SimpleStorage {
    }
 }
 
-pragma solidity ^0.8.9;
+pragma solidity 0.8.4;
 contract SimpleStorage {
    uint storedData;
    function set(uint x) public {
@@ -31,7 +31,7 @@ contract SimpleStorage {
    }
 }
 
-pragma solidity ^0.7.5;
+pragma solidity 0.8.4;
 contract SimpleStorage {
    uint storedData;
    function set(uint x) public {
@@ -42,7 +42,7 @@ contract SimpleStorage {
    }
 }
 
-pragma solidity ^0.8.6;
+pragma solidity 0.8.4;
 contract SimpleStorage {
    uint storedData;
    function set(uint x) public {
@@ -53,7 +53,7 @@ contract SimpleStorage {
    }
 }
 
-pragma solidity ^0.8.7;
+pragma solidity 0.8.4;
 contract SimpleStorage {
    uint storedData;
    function set(uint x) public {
@@ -64,7 +64,7 @@ contract SimpleStorage {
    }
 }
 
-pragma solidity ^0.9.5;
+pragma solidity 0.8.4;
 contract SimpleStorage {
    uint storedData;
    function set(uint x) public {
