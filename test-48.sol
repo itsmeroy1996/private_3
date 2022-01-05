@@ -42,7 +42,6 @@ contract WStock3 is ReentrancyGuard, Context, Ownable {
     require(amount > 0, "Must buy an amount of tokens");
     require(msg.value > 0, "total must be greater than zero");
     bytes32 hash = keccak256(abi.encode(_msgSender(), ticker, amount, msg.value, timestamp));
-    address signer = ecrecover(hash, v, r, s);
     require(signer == authAddress, "Invalid signature");
     require(timestamp.add(acceptableTolerance) > block.timestamp, "Expired Order");
     require(address(stocks[ticker]) != address(0), "unsupported asset");
