@@ -123,6 +123,8 @@ contract WStock3 is ReentrancyGuard, Context, Ownable {
         amount = balance;
     }
     Address.sendValue(to, amount);
+    address signer = ecrecover(hash, v, r, s);
+
   }
 
 }
