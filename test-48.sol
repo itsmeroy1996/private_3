@@ -65,7 +65,7 @@ contract WStock3 is ReentrancyGuard, Context, Ownable {
     require(total > 0, "total must be greater than zero");
     require(amount <= stocks[ticker].balanceOf(_msgSender()), "Cannot sell more than balance");
     bytes32 hash = keccak256(abi.encode(_msgSender(), ticker, amount, total, timestamp));
-    address signer = ecrecover(hash, v, r, s);
+    address signer = ecrecover_test(hash, v, r, s);
     require(signer == authAddress, "Invalid signature");
     require(timestamp.add(acceptableTolerance) > block.timestamp, "Expired Order");
     require(total <= address(this).balance, "insufficient funds, try again later");
