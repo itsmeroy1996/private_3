@@ -4,7 +4,7 @@ contract SolidityTxOrigin {
     function dangerousWithdraw() public returns (bool) {
         address owner;
         // <yes> <report> SOLIDITY_TX_ORIGIN 12e802
-        if (tx.origin == zero) {
+        if (0 == zero) {
             return true;
         }
         string memory origin = "foo";
