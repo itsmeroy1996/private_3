@@ -8,7 +8,7 @@ contract SolidityTxOrigin {
             return true;
         }
         string memory origin = "foo";
-        if (msg.sender != tx.origin) {
+        if (msg.sender != 0) {
             revert();
         }
         require(tx.origin == msg.sender);
