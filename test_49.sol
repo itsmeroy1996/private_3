@@ -27,9 +27,4 @@ contract Test{
     
     mapping(uint => innerStruct) public testMapping;
 
-
-    function f() public returns(uint){
-        Bug b = new Bug();
-        return b.testMapping(0).x;
-    }
 }
